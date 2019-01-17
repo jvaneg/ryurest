@@ -1,5 +1,7 @@
 # ryurest
-A Python module to interact with the REST API of the Ryu SDN controller.
+A Python3 module to interact with the REST API of the Ryu SDN controller.
+
+Python3 port of [nathancatania's project][og_repo].
 
 # ABOUT
 These are two Python modules that individually provide either a functional or object-orientated approach to using the Ryu REST API.
@@ -107,7 +109,7 @@ These can be found in the `demos` folder of this repository.
    * If Ryu is running on the same PC as the module (localhost), then there is no need to change anything.
    * If the Ryu controller is running on a different machine and/or port, you MUST set the API path. This is global for the entire ryufunc namespace.
      ```python
-     print ryufunc.API
+     print(ryufunc.API)
      # prints: http://localhost:8080
 
      # Change the default IP and Port
@@ -124,7 +126,7 @@ These can be found in the `demos` folder of this repository.
 
    # Prints a list of all DPIDs
    for DPID in DPID_list:
-      print DPID
+      print(DPID)
 
    # Access how you would any other array
    switch1_dpid = DPID_list[0]
@@ -158,3 +160,4 @@ This means that you can use `if` statements to check for and handle errors accor
 
 [requests]: http://docs.python-requests.org/en/master/
 [ryu_rest_docs]: http://ryu.readthedocs.io/en/latest/app/ofctl_rest.html
+[og_repo]: https://github.com/nathancatania/ryurest

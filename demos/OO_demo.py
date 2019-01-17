@@ -36,8 +36,8 @@ switch1.DPID = DPID_list[0]
 flows = switch1.get_flows()
 
 # Print data to screen
-print "\nGET FLOW TABLE FROM SWITCH:"
-print flows  # Dumps JSON data
+print("\nGET FLOW TABLE FROM SWITCH:")
+print(flows)  # Dumps JSON data
 
 # Example data dump (unicode JSON). Note DPID is a string.
 # {u'123917682136708':
@@ -55,8 +55,8 @@ print flows  # Dumps JSON data
 duration_sec = flows[ str(switch1.DPID) ][0][ 'duration_sec' ]
 
 # Print data to screen
-print "\nPARSING SPECIFIC VALUE FOR FLOW TABLE DUMP: 'duration_sec'"
-print duration_sec
+print("\nPARSING SPECIFIC VALUE FOR FLOW TABLE DUMP: 'duration_sec'")
+print(duration_sec)
 
 
 # Next, lets add a flow to the switch!
@@ -73,5 +73,5 @@ flow_rule = {
 switch1.add_flow( flow_rule )
 
 # Dump the flow table again to see the new flow added:
-print "\nGET UPDATED FLOW TABLE FROM SWITCH:"
-print switch1.get_flows()
+print("\nGET UPDATED FLOW TABLE FROM SWITCH:")
+print(switch1.get_flows())

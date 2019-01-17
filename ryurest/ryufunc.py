@@ -399,9 +399,9 @@ def get_port_description(DPID, port=None, openflow=None):
     rest_uri = API + "/stats/portdesc/" + str(DPID)
 
     if port is not None and openflow is None:
-        print "[ WARNING ]: Port filter specified, but OpenFlow version was not. Filtering is only compatible with OpenFlow v1.5+. Defaulting to no filter & dumping all ports."
+        print("[ WARNING ]: Port filter specified, but OpenFlow version was not. Filtering is only compatible with OpenFlow v1.5+. Defaulting to no filter & dumping all ports.")
     elif port is not None and openflow < 1.5:
-        print "[ WARNING ]: Port filter specified, but REST API does not allow filtering with specified OpenFlow version (v" + str(openflow) + "). Filtering is only compatible with OpenFlow v1.5+. Defaulting to no filter & dumping all ports."
+        print("[ WARNING ]: Port filter specified, but REST API does not allow filtering with specified OpenFlow version (v" + str(openflow) + "). Filtering is only compatible with OpenFlow v1.5+. Defaulting to no filter & dumping all ports.")
     elif port is not None and openflow >= 1.5:
         # If ID is specified to filter/match results, and compatible OpenFlow version...
         # Modify URI to filter port
@@ -679,9 +679,9 @@ def get_group_description(DPID, port=None, openflow=None):
     rest_uri = API + "/stats/groupdesc/" + str(DPID)
 
     if port is not None and openflow is None:
-        print "[ WARNING ]: Port filter specified, but OpenFlow version was not. Filtering is only compatible with OpenFlow v1.5+. Defaulting to no filter & dumping all ports."
+        print("[ WARNING ]: Port filter specified, but OpenFlow version was not. Filtering is only compatible with OpenFlow v1.5+. Defaulting to no filter & dumping all ports.")
     elif port is not None and openflow < 1.5:
-        print "[ WARNING ]: Port filter specified, but REST API does not allow filtering with specified OpenFlow version (v" + str(openflow) + "). Filtering is only compatible with OpenFlow v1.5+. Defaulting to no filter & dumping all ports."
+        print("[ WARNING ]: Port filter specified, but REST API does not allow filtering with specified OpenFlow version (v" + str(openflow) + "). Filtering is only compatible with OpenFlow v1.5+. Defaulting to no filter & dumping all ports.")
     elif port is not None and openflow >= 1.5:
         # If ID is specified to filter/match results, and compatible OpenFlow version...
         # Modify URI to filter port
