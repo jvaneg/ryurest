@@ -23,15 +23,11 @@ Run the Ryu controller with REST API enabled.
 `$ sudo ryu-manager ryu.app.simple_switch_13 ryu.app.ofctl_rest`
 
 # INSTALLATION
-## PyPi
-`$ pip install ryurest`
-
-You may wish to use `sudo` with this command.
 
 ## From source
 Alternatively you can either download or clone this repository, place the required `ryufunc.py` and/or `ryuswitch.py` modules into your project directory, and import them as per normal.
 
-`$ git clone https://github.com/nathancatania/ryurest`
+`$ git clone https://github.com/jvaneg/ryurest`
 
 ```python
 # imports the functional module
